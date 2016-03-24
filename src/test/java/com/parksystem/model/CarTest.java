@@ -9,8 +9,7 @@ public class CarTest {
 	public Car car;
 
 	@Test	
-	public void testObjectCar() {
-		
+	public void testObjectCar() {		
 		Car car = new Car(); 
 		
 		assertTrue(car instanceof Car);

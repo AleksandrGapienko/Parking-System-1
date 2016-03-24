@@ -10,6 +10,7 @@ public class CarTest {
 
 	@Test	
 	public void testObjectCar() {
+		
 		Car car = new Car(); 
 		
 		assertTrue(car instanceof Car);

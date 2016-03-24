@@ -10,7 +10,7 @@ public abstract class Vehicle {
 	public int getSpotsNeeded() {
 		return spotsNeeded;
 	}
-
+	// comment
 	public VehicleSize getSize() {
 		return size;
 	}

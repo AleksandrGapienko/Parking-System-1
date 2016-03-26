@@ -2,7 +2,6 @@ package com.parksystem.model;
 
 public class Car extends Vehicle {
 
-
 	Car(String licensePlate) {
 
 		super(licensePlate);
@@ -19,7 +18,6 @@ public class Car extends Vehicle {
 
 		spotsNeeded = 1;
 
-		size = VehicleSize.Compact;
 	}
 
 	public boolean canFitInSpot(ParkingSpot spot) {

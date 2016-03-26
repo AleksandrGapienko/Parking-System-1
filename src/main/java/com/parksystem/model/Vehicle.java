@@ -4,18 +4,7 @@ import java.util.ArrayList;
 
 public abstract class Vehicle {
 
-<<<<<<< HEAD
-	public int getSpotsNeeded() {
-		return spotsNeeded;
-	}
-	// comment
-	public VehicleSize getSize() {
-		return size;
-	}
-=======
-
     Vehicle(String licensePlate) {
->>>>>>> 38eda8f4f2e431865ba47bfd11fafd181f8f2a47
 
         this.licensePlate = licensePlate;
 

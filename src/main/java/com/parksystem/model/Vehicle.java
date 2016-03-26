@@ -2,11 +2,9 @@ package com.parksystem.model;
 
 import java.util.ArrayList;
 
-public abstract class  Vehicle {
-	protected String licensePlate;
-	protected int spotsNeeded;
-	protected VehicleSize size;
+public abstract class Vehicle {
 
+<<<<<<< HEAD
 	public int getSpotsNeeded() {
 		return spotsNeeded;
 	}
@@ -14,12 +12,42 @@ public abstract class  Vehicle {
 	public VehicleSize getSize() {
 		return size;
 	}
+=======
 
-	public void parkInSpot(ParkingSpot spot) {}
+    Vehicle(String licensePlate) {
+>>>>>>> 38eda8f4f2e431865ba47bfd11fafd181f8f2a47
 
-	public void clearSpots() {}
+        this.licensePlate = licensePlate;
 
-	public abstract boolean canFitInSpot(ParkingSpot spot);
+    }
 
-	public abstract void print();
+    Vehicle(ParkingSpot spot, String licensePlate) {
+        this.spot = spot;
+        this.licensePlate = licensePlate;
+    }
+
+    protected String licensePlate;
+    protected int spotsNeeded;
+    protected VehicleSize size;
+    protected ParkingSpot spot;
+
+
+    public int getSpotsNeeded() {
+        return spotsNeeded;
+    }
+
+    public VehicleSize getSize() {
+        return size;
+    }
+
+    public void parkInSpot(ParkingSpot spot) {
+    }
+
+    public void clearSpots(ParkingSpot spot) {
+        spot.removeVehicle();
+    }
+
+    public abstract boolean canFitInSpot(ParkingSpot spot);
+
+    public abstract void print();
 }

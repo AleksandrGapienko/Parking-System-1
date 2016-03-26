@@ -14,7 +14,8 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-target/*
+target/
+*.class
 
 # Eclipse Core
 .project
@@ -102,4 +103,5 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+/.idea/
 /target/

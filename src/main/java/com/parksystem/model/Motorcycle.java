@@ -1,17 +1,39 @@
 package com.parksystem.model;
 
-public class Motorcycle extends Vehicle{
+public class Motorcycle extends Vehicle {
 
-	@Override
-	public boolean canFitInSpot(ParkingSpot spot) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+    Motorcycle(String licensePlate) {
 
-	@Override
-	public void print() {
-		// TODO Auto-generated method stub
-		System.out.println("Motorcycle");
-	}
+        super(licensePlate);
+
+        spotsNeeded = 1;
+
+        size = VehicleSize.Motorcycle;
+    }
+
+    Motorcycle(ParkingSpot spot, String licensePlate) {
+        super(spot, licensePlate);
+
+        spot.setVehicle(this);
+
+        spotsNeeded = 1;
+
+        size = VehicleSize.Motorcycle;
+    }
+
+    @Override
+    public boolean canFitInSpot(ParkingSpot spot) {
+
+        if (spot.getSpotSize().equals(size)) {
+            return true;
+        } else return false;
+    }
+
+
+    @Override
+    public void print() {
+        // TODO Auto-generated method stub
+        System.out.println("Motorcycle");
+    }
 
 }

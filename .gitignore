@@ -1,4 +1,6 @@
 
+*.iml
+
 # Created by https://www.gitignore.io/api/eclipse,intellij
 
 ### Eclipse ###
@@ -56,6 +58,11 @@ target/
 # Code Recommenders
 .recommenders/
 
+/.idea/
+/target/
+
+
+# Created by https://www.gitignore.io/api/intellij
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
@@ -82,6 +89,7 @@ target/
 
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
+.idea/
 
 ## File-based project format:
 *.iws
@@ -103,5 +111,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-/.idea/
-/target/
+### Intellij Patch ###
+
+

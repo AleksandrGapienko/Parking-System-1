@@ -1,11 +1,15 @@
 package com.parksystem.model;
 
-import java.util.Arrays;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.LinkedList;
 
 public class Level {
 
 
-    ParkingSpot[][] parkingspots;
+    LinkedList<ParkingSpot> parkingSpots;
     private int rows;
     private int spots;
     private int leveno;
@@ -36,11 +40,13 @@ public class Level {
 
     Level(int row, int spots) {
 
-        this.parkingspots = new ParkingSpot[row][spots];
+        this.parkingSpots = new LinkedList<ParkingSpot>();
         this.rows = row;
         this.spots = spots;
+        int spotno = 0;
 
-        for (int i = 0; i < row; i++) {
+        for (int i = 1; i < row+1; i++) {
+
 
             int each = 0;
             int foreach = spots / VehicleSize.values().length;
@@ -50,32 +56,24 @@ public class Level {
             }
 
 
-            for (int j = 0; j < spots; j++, foreach--) {
+            for (int j = 1; j < spots+1; j++, foreach--) {
 
                 if (foreach == 0) {
                     each++;
                     foreach = spots / VehicleSize.values().length;
                 }
 
-                parkingspots[i][j] = new ParkingSpot(Level.this, i + 1, j + 1, VehicleSize.values()[each]);
+                spotno++;
+                parkingSpots.add(new ParkingSpot(Level.this, i, spotno, VehicleSize.values()[each]));
 
             }
         }
     }
 
-    public void Levelinfo() {
+    public void Levelinfo() throws IOException{
 
-        for (int i = 0; i < rows; i++) {
-
-            System.out.println("\t" + "#####" + " ROW № " + parkingspots[i][1].getRow() + " " + "#####");
-            System.out.println();
-            for (int j = 0; j < spots; j++) {
-
-                System.out.println(" Spot No " + parkingspots[i][j].getSpotNumber() + "\t" + " Spot size: " + parkingspots[i][j].getSpotSize() + " \t" + " Vehicle: " + parkingspots[i][j].getVehicle() + "\t");
-
-            }
-            System.out.println();
-
+        for (ParkingSpot parkingSpot : parkingSpots) {
+            System.out.println("Row: " + parkingSpot.getRow()+" \t"+ "No: " + parkingSpot.getSpotNumber()+ " \t" + "Size: " + parkingSpot.getSpotSize()+ " \t\t"+ "Car: " + parkingSpot.getVehicle());
         }
 
     }

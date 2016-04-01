@@ -1,0 +1,16 @@
+LEVEL No: 1
+Row: 1 	No: 1 	Size: Motorcycle 		Car: nullLEVEL No: 1
+Row: 1 	No: 2 	Size: Motorcycle 		Car: nullLEVEL No: 1
+Row: 1 	No: 3 	Size: Motorcycle 		Car: nullLEVEL No: 1
+Row: 1 	No: 4 	Size: Motorcycle 		Car: nullLEVEL No: 1
+Row: 1 	No: 5 	Size: Motorcycle 		Car: nullLEVEL No: 1
+Row: 1 	No: 6 	Size: Compact 		Car: nullLEVEL No: 1
+Row: 1 	No: 7 	Size: Compact 		Car: nullLEVEL No: 1
+Row: 1 	No: 8 	Size: Compact 		Car: nullLEVEL No: 1
+Row: 1 	No: 9 	Size: Compact 		Car: nullLEVEL No: 1
+Row: 1 	No: 10 	Size: Compact 		Car: nullLEVEL No: 1
+Row: 1 	No: 11 	Size: Large 		Car: nullLEVEL No: 1
+Row: 1 	No: 12 	Size: Large 		Car: nullLEVEL No: 1
+Row: 1 	No: 13 	Size: Large 		Car: nullLEVEL No: 1
+Row: 1 	No: 14 	Size: Large 		Car: nullLEVEL No: 1
+Row: 1 	No: 15 	Size: Large 		Car: null

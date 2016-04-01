@@ -1,4 +1,6 @@
 
+*.iml
+
 # Created by https://www.gitignore.io/api/eclipse,intellij
 
 ### Eclipse ###
@@ -14,6 +16,8 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+target/
+*.class
 
 # Eclipse Core
 .project
@@ -54,6 +58,11 @@ local.properties
 # Code Recommenders
 .recommenders/
 
+/.idea/
+/target/
+
+
+# Created by https://www.gitignore.io/api/intellij
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
@@ -80,6 +89,7 @@ local.properties
 
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
+.idea/
 
 ## File-based project format:
 *.iws
@@ -101,4 +111,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-/.idea/
+### Intellij Patch ###
+
+

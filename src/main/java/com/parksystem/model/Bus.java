@@ -2,6 +2,11 @@ package com.parksystem.model;
 
 public class Bus extends Vehicle{
 
+	Bus() {
+
+		size = VehicleSize.Large;
+
+	}
 
 	Bus(String licensePlate) {
 		super(licensePlate);

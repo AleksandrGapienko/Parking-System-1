@@ -1,39 +1,46 @@
 package com.parksystem.model;
 
-import com.sun.jmx.snmp.SnmpBadSecurityLevelException;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
-import java.lang.invoke.CallSite;
-import java.util.Arrays;
+import java.io.*;
+
 
 
 public class Test {
 
-    public static void main(String[] args) {
+    public static final Logger LOG = Logger.getLogger(Test.class);
 
-//Инициализируем парковку. Формат ввода: Количевство уровней, рядов, мест.
+
+    public static void main(String[] args) throws IOException {
+
+
+        PropertyConfigurator.configure("log4j.properties");
+
+
+
+        LOG.info("Entering application");
+        System.out.println();
+
+
         ParkingSystem parkingsystem = new ParkingSystem(1, 1, 15);
 
-        //Два мотоцикла(Номерной знак в качевстве аргумента)
-        Motorcycle moto = new Motorcycle("21alexander");
-        Motorcycle moto2 = new Motorcycle("ds");
 
-        //Паркуем(Формат: Уровень, ряд, номер)
-        parkingsystem.addVehicle(1, 1, 1, moto);
-
-        //Паркуем в тоже место. Вот не задача, но место занято!
-        parkingsystem.addVehicle(1, 1, 1, moto2);
-
-        //Получаем инфо о парковке
         parkingsystem.getInfo();
 
-        //Паркуем рядом(Формат: Уровень, ряд, номер)
-        parkingsystem.addVehicle(1, 1, 2, moto2);
+        Car bmw = new Car();
 
-        //Снова инфо о парковке
+
+        parkingsystem.addVehicle(1, 6, bmw);
         parkingsystem.getInfo();
+        parkingsystem.removeVehicle(1, 6);
+        parkingsystem.getInfo();
+
+        System.out.println();
+        LOG.info("Exiting application");
 
 
     }
 
-
 }
+

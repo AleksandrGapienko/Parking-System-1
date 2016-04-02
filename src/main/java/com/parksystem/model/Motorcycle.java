@@ -2,6 +2,13 @@ package com.parksystem.model;
 
 public class Motorcycle extends Vehicle {
 
+
+    Motorcycle() {
+
+        size = VehicleSize.Motorcycle;
+
+    }
+
     Motorcycle(String licensePlate) {
 
         super(licensePlate);

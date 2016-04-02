@@ -2,6 +2,13 @@ package com.parksystem.model;
 
 public class Car extends Vehicle {
 
+
+	Car() {
+
+		size = VehicleSize.Compact;
+
+	}
+
 	Car(String licensePlate) {
 
 		super(licensePlate);
